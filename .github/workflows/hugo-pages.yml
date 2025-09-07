@@ -45,11 +45,17 @@ jobs:
         run: |
           OWNER="${{ github.repository_owner }}"
           REPO="${{ github.event.repository.name }}"
+          DART_SASS_VERSION="1.92.1"
           if [[ "$REPO" == *.github.io ]]; then
             BASE_URL="https://${REPO}/"
           else
             BASE_URL="https://${OWNER}.github.io/${REPO}/"
           fi
+          curl -LJO https://github.com/sass/dart-sass/releases/download/1.92.1/dart-sass-1.92.1-linux-x64.tar.gz && \
+          tar -xf dart-sass-1.92.1-linux-x64.tar.gz && \
+          rm dart-sass-1.92.1-linux-x64.tar.gz && \
+          ln -s `realpath ./dart-sass/sass` `realpath ./dart-sass`/dart-sass && \
+          export PATH=`realpath ./dart-sass`:$PATH && \
           hugo --minify --source site --destination ../public --baseURL "$BASE_URL"
 
       - name: Upload artifact
