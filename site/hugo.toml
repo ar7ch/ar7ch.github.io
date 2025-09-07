@@ -1,22 +1,65 @@
-baseURL = '/'
+baseURL = 'https://ar7ch.github.io'
 languageCode = 'en-us'
-title = "ar7ch's Blog"
+title = "ar7ch's blog"
 enableRobotsTXT = true
+
+[params]
+  user = "ar7ch"
+  hostname = "gohugo.io"
+  defaultTheme = 'auto'
+  disableThemeToggle = false
+  ShowReadingTime = true
+  ShowShareButtons = false
+  hideFooter = false
+  dateFormat = '2006-01-02'
+  footerHtml = 'CC-0, Built with <a href="https://github.com/LordMathis/hugo-theme-nightfall" class="footerLink">Nightfall</a> theme'
+  [params.author]
+    name = "hi, i'm ar7ch"
+    email = "hello@ar7ch.me"
+    intro = "Awesome hugo blog"
+
+  [params.styles]
+    color = "green"
+
+[[params.social]]
+key = 0
+name = "github"
+url = "https://github.com/gohugoio"
+target = "_blank"
+aria = "GitHub Profile"
+
+[[params.social]]
+key = 2
+name = "linkedin"
+url = "https://www.example.com"
+aria = "LinkedIn Profile"
+
+[[params.social]]
+key = 3
+name = "email"
+url = "mailto:email@example.com"
+aria = "My e-Mail Address"
 
 [module]
   [[module.imports]]
-    path = "github.com/hugo-sid/hugo-blog-awesome"
+    path = "github.com/lordmathis/hugo-theme-nightfall"
 
 [markup]
   [markup.highlight]
     lineNos = true
     lineNumbersInTable = false
-    # This allows Bear Cub to use a variation of Dracula that is more accessible
-    # to people with poor eyesight. For more information about color contrast
-    # and accessibility, see https://web.dev/color-and-contrast-accessibility/
     noClasses = false
 
 [menu]
+  [[menu.header]]
+    name = "posts"
+    weight = 0
+    url = "posts"
+  [[menu.header]]
+    name = "about"
+    weight = 1
+    url = "about"
+
   [[menu.main]]
     name = "Home"
     url = "/"
@@ -36,11 +79,3 @@ enableRobotsTXT = true
     name = "Tags"
     url = "/tags/"
     weight = 40
-
-[params]
-  defaultTheme = 'auto'
-  disableThemeToggle = false
-  ShowReadingTime = true
-  ShowShareButtons = false
-  hideFooter = false
-  dateFormat = '2006-01-02'

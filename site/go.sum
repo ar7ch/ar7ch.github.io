@@ -4,3 +4,5 @@ github.com/clente/hugo-bearcub v0.0.0-20250822192412-1d12a7654944 h1:rdfzGOjr6GZ
 github.com/clente/hugo-bearcub v0.0.0-20250822192412-1d12a7654944/go.mod h1:apcY0kKQY+CnkwsWuHiEfSrBusQgEsfAp9g065sNLFg=
 github.com/hugo-sid/hugo-blog-awesome v1.20.0 h1:4WkPBeAuKdpDNzB4DSz31hG7W4qI9+V/1wrYjSMxRl4=
 github.com/hugo-sid/hugo-blog-awesome v1.20.0/go.mod h1:3XVERF66wgQpTsruOajS5Swr+uvyTzov1acafNaqm1E=
+github.com/lordmathis/hugo-theme-nightfall v0.10.0 h1:qrgzV6+ziBaLwY/6O72us/WvV87Z7PqAb7p+r1zfXsA=
+github.com/lordmathis/hugo-theme-nightfall v0.10.0/go.mod h1:/4xkMFFnJSszGZMoLXtHpnleNW8OfY9qu3QSCko6LDo=
