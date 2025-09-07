@@ -50,7 +50,7 @@ jobs:
           else
             BASE_URL="https://${OWNER}.github.io/${REPO}/"
           fi
-          hugo --minify --source site --destination public --baseURL "$BASE_URL"
+          hugo --minify --source site --destination ../public --baseURL "$BASE_URL"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
